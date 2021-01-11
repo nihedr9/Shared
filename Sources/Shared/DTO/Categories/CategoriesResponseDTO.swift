@@ -9,7 +9,7 @@ import Foundation
 
 public struct CategoriesResponseDTO: Codable {
     public struct DataDTO: Codable {
-        let categories: [CategoryDTO]
+        public let categories: [CategoryDTO]
     }
     public let data: DataDTO
 }
