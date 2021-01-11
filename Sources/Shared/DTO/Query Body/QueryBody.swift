@@ -31,4 +31,10 @@ public struct QueryBody: Codable {
     public let operationName: String
     public let query: String
     public let variables: Variable?
+
+    public init(operationName: String, query: String, variables: Variable?) {
+        self.operationName = operationName
+        self.query = query
+        self.variables = variables
+    }
 }
