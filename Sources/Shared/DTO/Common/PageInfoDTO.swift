@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct PageInfoDTO: Codable {
-    let startCursor: String
-    let hasPreviousPage: Bool
-    let endCursor: String
-    let hasNextPage: Bool
-    let __typename: String
+public struct PageInfoDTO: Codable {
+    public let startCursor: String
+    public let hasPreviousPage: Bool
+    public let endCursor: String
+    public let hasNextPage: Bool
+    public let __typename: String
 }

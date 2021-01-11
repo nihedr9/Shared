@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct CategoryDTO: Codable {
-    let id: String
-    let parentId: String?
-    let name: String
-    let engName: String
-    let slug: String?
-    let subCategories: [CategoryDTO]?
-    let __typename: String
+public struct CategoryDTO: Codable {
+    public let id: String
+    public let parentId: String?
+    public let name: String
+    public let engName: String
+    public let slug: String?
+    public let subCategories: [CategoryDTO]?
+    public let __typename: String
 }

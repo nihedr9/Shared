@@ -7,24 +7,24 @@
 
 import Foundation
 
-struct ImageDTO: Codable {
-    let url: String
+public struct ImageDTO: Codable {
+    public let url: String
 }
 
-struct UserDTO: Codable {
+public struct UserDTO: Codable {
 
-    struct ContactPhoneDTO: Codable {
-        let e164: String
-        let national: String
+    public struct ContactPhoneDTO: Codable {
+        public let e164: String
+        public let national: String
     }
 
-    let uuid: String
-    let displayName: String
-    let email: String?
-    let firstName: String?
-    let lastName: String?
-    let memberSince: String?
-    let contactPhone: ContactPhoneDTO?
-    let avatar: ImageDTO?
-    let __typename: String
+    public let uuid: String
+    public let displayName: String
+    public let email: String?
+    public let firstName: String?
+    public let lastName: String?
+    public let memberSince: String?
+    public let contactPhone: ContactPhoneDTO?
+    public let avatar: ImageDTO?
+    public let __typename: String
 }

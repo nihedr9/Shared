@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct RegionDTO: Codable {
-    let id: String
-    let name: String
-    let slug: String
-    let subdivisions: [RegionDTO]?
-    let __typename: String
+public struct RegionDTO: Codable {
+    public let id: String
+    public let name: String
+    public let slug: String
+    public let subdivisions: [RegionDTO]?
+    public let __typename: String
 }

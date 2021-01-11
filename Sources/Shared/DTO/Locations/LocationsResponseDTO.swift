@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct LocationsResponseDTO: Codable {
-    struct DataDTO: Codable {
-        let locations: [RegionDTO]
+public struct LocationsResponseDTO: Codable {
+    public struct DataDTO: Codable {
+        public let locations: [RegionDTO]
     }
-    let data: DataDTO
+    public let data: DataDTO
 }

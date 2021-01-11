@@ -7,40 +7,40 @@
 
 import Foundation
 
-struct ListingsDTO: Codable {
-    let items: [ItemDTO]
-    let totalCount: Int
-    let pageInfo: PageInfoDTO
-    let __typename: String
+public struct ListingsDTO: Codable {
+    public let items: [ItemDTO]
+    public let totalCount: Int
+    public let pageInfo: PageInfoDTO
+    public let __typename: String
 }
 
-struct ItemDTO: Codable {
+public struct ItemDTO: Codable {
 
-    struct MetaDataDTO: Codable {
-        let displayValue: String
-        let key: String
-        let label: String
+    public struct MetaDataDTO: Codable {
+        public let displayValue: String
+        public let key: String
+        public let label: String
     }
 
-    let uuid: String
-    let description: String
-    let title: String
-    let price: String
-    let currency: String
-    let createdAt: String
+    public let uuid: String
+    public let description: String
+    public let title: String
+    public let price: String
+    public let currency: String
+    public let createdAt: String
 
-    let thumbnail: String?
-    let bumpDate: String?
-    let status: String?
-    var categoryID: String?
+    public let thumbnail: String?
+    public let bumpDate: String?
+    public let status: String?
+    public var categoryID: String?
 
-    var category: CategoryDTO
+    public var category: CategoryDTO
     private var categories: [CategoryDTO]?
 
-    let user: UserDTO
+    public let user: UserDTO
 
-    let images: [ImageDTO]?
-    let metadata: [MetaDataDTO]?
+    public let images: [ImageDTO]?
+    public let metadata: [MetaDataDTO]?
 
     enum CodingKeys: String, CodingKey {
         case uuid
@@ -59,7 +59,7 @@ struct ItemDTO: Codable {
         case metadata
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         uuid = try container.decode(String.self, forKey: .uuid)
         description = try container.decode(String.self, forKey: .description)

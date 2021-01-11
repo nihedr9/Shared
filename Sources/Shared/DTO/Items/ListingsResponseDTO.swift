@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct ListingsResponseDTO: Codable {
-    struct DataDTO: Codable {
-        let listings: ListingsDTO
+public struct ListingsResponseDTO: Codable {
+    public struct DataDTO: Codable {
+        public let listings: ListingsDTO
     }
-    let data: DataDTO
+    public let data: DataDTO
 }
 
 
-struct ListingResponseDTO: Codable {
-    struct DataDTO: Codable {
-        let listing: ItemDTO
+public struct ListingResponseDTO: Codable {
+    public struct DataDTO: Codable {
+        public let listing: ItemDTO
     }
-    let data: DataDTO
+    public let data: DataDTO
 }
