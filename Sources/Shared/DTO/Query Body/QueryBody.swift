@@ -19,6 +19,8 @@ public struct QueryBody: Codable {
         public var sortBy: String?
         public var filter: Filter?
         public var uuid: String?
+
+        public init() { }
     }
 
     public struct Filter: Codable {
