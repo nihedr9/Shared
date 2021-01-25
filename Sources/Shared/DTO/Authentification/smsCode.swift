@@ -8,7 +8,7 @@
 import Foundation
 
 public struct SendCodeRequestDTO: Codable {
-    public var haphone_number: String
+    public var phone_number: String
 }
 
 public struct SendCodeResponseDTO: Codable {
