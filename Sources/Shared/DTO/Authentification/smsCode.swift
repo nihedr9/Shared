@@ -8,6 +8,11 @@
 import Foundation
 
 public struct SendCodeRequestDTO: Codable {
+
+    public init(number: String) {
+        self.phone_number = number
+    }
+
     public var phone_number: String
 }
 
@@ -24,6 +29,13 @@ public struct SendCodeResponseDTO: Codable {
 }
 
 public struct ConfirmCodeRequestDTO: Codable {
+
+    public init(number: String, challenge: String, code: String) {
+        self.phone_number = number
+        self.public_challenge = challenge
+        self.code = code
+    }
+
     public let phone_number: String
     public let public_challenge: String
     public let code: String
