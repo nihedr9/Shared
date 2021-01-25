@@ -23,16 +23,20 @@ public struct ItemDTO: Codable {
     }
 
     public struct ItemLocationDTO: Codable {
-        public struct LocationSubvidision: Codable {
+        public struct LocationSubvidisionLevel1: Codable {
+            public struct LocationSubvidisionLevel2: Codable {
+                public let name: String
+            }
+
             public let name: String
-            public let subdivisionLevel2: LocationSubvidision?
+            public let subdivisionLevel2: LocationSubvidisionLevel2
         }
 
         public let lat: Int
         public let lon: Int
         public let postcode: String
         public let subdivisionId: String
-        public let subdivisionLevel1: LocationSubvidision
+        public let subdivisionLevel1: LocationSubvidisionLevel1
     }
 
     public let uuid: String
