@@ -34,7 +34,7 @@ public struct ItemDTO: Codable {
 
         public let lat: Double
         public let lon: Double
-        public let postcode: String
+        public let postcode: String?
         public let subdivisionId: String
         public let subdivisionLevel1: LocationSubvidisionLevel1
     }
