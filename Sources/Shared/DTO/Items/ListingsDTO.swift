@@ -22,6 +22,19 @@ public struct ItemDTO: Codable {
         public let label: String
     }
 
+    public struct ItemLocationDTO: Codable {
+        public struct LocationSubvidision: Codable {
+            public let name: String
+            public let subdivisionLevel2: LocationSubvidision?
+        }
+
+        public let lat: Int
+        public let lon: Int
+        public let postcode: String
+        public let subdivisionId: String
+        public let subdivisionLevel1: LocationSubvidision
+    }
+
     public let uuid: String
     public let description: String
     public let title: String
@@ -33,6 +46,8 @@ public struct ItemDTO: Codable {
     public let bumpDate: String?
     public let status: String?
     public var categoryID: String?
+
+    public var location: ItemLocationDTO
 
     public var category: CategoryDTO
     private var categories: [CategoryDTO]?
@@ -52,6 +67,7 @@ public struct ItemDTO: Codable {
         case createdAt
         case bumpDate
         case status
+        case location
         case category
         case categories
         case user
@@ -72,6 +88,8 @@ public struct ItemDTO: Codable {
         bumpDate = try container.decodeIfPresent(String.self, forKey: .bumpDate)
         status = try container.decodeIfPresent(String.self, forKey: .status)
 
+        location = try container.decode(ItemLocationDTO.self, forKey: .location)
+        
         if let id = try? container.decode(String.self, forKey: .category) {
             categoryID = id
         }
