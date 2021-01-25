@@ -22,3 +22,13 @@ public struct SendCodeResponseDTO: Codable {
         case newUser = "new_user"
     }
 }
+
+public struct ConfirmCodeRequestDTO: Codable {
+    public let phone_number: String
+    public let public_challenge: String
+    public let code: String
+}
+
+public struct ConfirmCodeResponseDTO: Codable {
+    public let auth_token: String
+}
