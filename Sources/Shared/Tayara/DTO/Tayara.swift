@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Tayara {
+public struct Tayara {
     
 }
