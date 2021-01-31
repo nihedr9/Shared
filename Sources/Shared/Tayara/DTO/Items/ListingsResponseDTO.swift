@@ -19,7 +19,7 @@ extension Tayara {
 
     public struct ListingResponseDTO: Codable {
         public struct DataDTO: Codable {
-            public let listing: ListingsDTO.ItemDTO
+            public let listing: ListingsDTO.ItemDTO?
         }
         public let data: DataDTO
     }
