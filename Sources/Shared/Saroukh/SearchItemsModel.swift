@@ -12,6 +12,11 @@ public struct SearchItemsModel: Codable {
     public struct Order: Codable {
         public let orderBy: String
         public let acsending: Int
+
+        public init(orderBy: String, acsending: Int) {
+            self.orderBy = orderBy
+            self.acsending = acsending
+        }
     }
 
     public let query: String
