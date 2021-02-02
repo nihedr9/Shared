@@ -8,12 +8,20 @@
 import Foundation
 
 public struct SearchItemsModel: Codable {
+
+    public struct Order: Codable {
+        public let orderBy: String
+        public let acsending: Int
+    }
+
     public let query: String
+    public let order: Order
     public let categoryID: String?
     public let regionID: String?
 
-    public init(query: String, categoryID: String?, regionID: String?) {
+    public init(query: String, order: Order, categoryID: String?, regionID: String?) {
         self.query = query
+        self.order = order
         self.categoryID = categoryID
         self.regionID = regionID
     }
